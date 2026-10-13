@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tobi Royal Event Planner & Hospitality</title>
+<style>
+:root{--cream:#faf5ed;--brown:#50372b;--gold:#b18a55;--white:#fff;--muted:#74685e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:Arial,sans-serif;line-height:1.6}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 7%;background:#fff;gap:20px;flex-wrap:wrap}
+.brand{font-family:Georgia,serif;font-size:21px;font-weight:bold}
+.brand small{display:block;font:10px Arial,sans-serif;letter-spacing:3px;color:var(--gold)}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--brown);text-decoration:none;font-size:14px}
+.hero{min-height:520px;display:flex;align-items:center;padding:70px 8%;color:white;background:linear-gradient(90deg,rgba(45,29,21,.82),rgba(45,29,21,.2)),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:620px}
+.eyebrow{color:#e5c797;text-transform:uppercase;letter-spacing:3px;font-size:12px}
+h1{font:clamp(40px,6vw,70px)/1.08 Georgia,serif;margin:18px 0}
+.hero p{font-size:18px;max-width:540px}
+.button{display:inline-block;background:var(--gold);color:white;padding:13px 22px;border:0;border-radius:3px;text-decoration:none;font-weight:bold;cursor:pointer}
+section{padding:70px 7%}
+.heading{text-align:center;max-width:650px;margin:0 auto 35px}
+h2{font:clamp(30px,4vw,43px) Georgia,serif;margin:8px 0 14px}
+.heading p,.about p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:white;border-radius:7px;overflow:hidden;box-shadow:0 6px 25px #50372b0d}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:22px}
+.card h3{font:24px Georgia,serif;margin:0 0 8px}
+.card p{color:var(--muted);font-size:14px}
+.card a{color:#87633b;font-weight:bold;text-decoration:none}
+.about{background:#eee3d4;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{width:100%;max-height:430px;object-fit:cover;border-radius:6px}
+form{max-width:700px;margin:auto;background:white;padding:28px;border-radius:7px}
+label{display:block;margin:13px 0 5px;font-weight:bold;font-size:14px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d9cbbc;border-radius:4px;font:inherit}
+textarea{min-height:120px}
+.form-note{font-size:13px;color:var(--muted)}
+footer{text-align:center;background:var(--brown);color:white;padding:30px 7%}
+footer p{color:#e5d8ca;font-size:13px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}.about{grid-template-columns:1fr}header{align-items:flex-start}nav{gap:12px}.hero{min-height:460px;padding:55px 7%}section{padding:52px 6%}.card img{height:240px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">TOBI ROYAL<small>EVENT PLANNER &amp; HOSPITALITY</small></div>
+  <nav>
+    <a href="#home">Home</a><a href="#services">Services</a>
+    <a href="#about">About</a><a href="#contact">Enquiries</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow">Beautiful moments begin here</div>
+    <h1>Your special day, beautifully planned.</h1>
+    <p>From weddings and birthdays to elegant celebrations, we help you bring your vision to life with care, creativity and thoughtful details.</p>
+    <a class="button" href="#services">Explore Our Services</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="heading">
+    <div class="eyebrow">What we offer</div>
+    <h2>Make every moment memorable</h2>
+    <p>Explore our services and tell us what you need for your next celebration.</p>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80" alt="Elegant wedding ceremony">
+      <div class="card-body"><h3>Event Planning</h3><p>Planning support for weddings, birthdays, anniversaries and special occasions.</p><a href="#contact" onclick="choose('Event planning packages')">Enquire about planning →</a></div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=80" alt="Beautiful event table decorations">
+      <div class="card-body"><h3>Wedding &amp; Birthday Décor</h3><p>Discuss your colours, theme and decoration ideas for a celebration to remember.</p><a href="#contact" onclick="choose('Wedding and birthday decorations')">Enquire about décor →</a></div>
+    </article>
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1507504031003-b417219a0rop?auto=format&fit=crop&w=900&q=80" alt="Event reception setup">
+      <div class="card-body"><h3>Event Equipment</h3><p>Ask about chairs, tables and other event equipment for your gathering.</p><a href="#contact" onclick="choose('Chairs, tables and event equipment')">Ask about equipment →</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div>
+    <div class="eyebrow">A warm welcome</div>
+    <h2>We care about your celebration.</h2>
+    <p>At Tobi Royal Event Planner &amp; Hospitality, we believe every celebration deserves care and attention. Tell us your ideas and let us discuss how to make your occasion special.</p>
+    <a class="button" href="#contact">Let's Talk About Your Event</a>
+  </div>
+  <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80" alt="Welcoming decorated event venue">
+</section>
+
+<section id="contact">
+  <div class="heading">
+    <div class="eyebrow">Let's plan together</div>
+    <h2>Tell us about your event</h2>
+    <p>Fill in the form to prepare your enquiry.</p>
+  </div>
+  <form id="enquiry">
+    <label for="name">Your name</label><input id="name" required placeholder="Enter your name">
+    <label for="contact">Phone number or email</label><input id="contact" required placeholder="How can we contact you?">
+    <label for="service">Service you need</label>
+    <select id="service" required>
+      <option value="">Choose a service</option>
+      <option>Event planning packages</option>
+      <option>Wedding and birthday decorations</option>
+      <option>Chairs, tables and event equipment</option>
+      <option>More than one service</option>
+    </select>
+    <label for="date">Event date (optional)</label><input id="date" type="date">
+    <label for="details">Tell us more</label><textarea id="details" placeholder="Event type, location, number of guests, or items needed"></textarea>
+    <p><button class="button" type="submit">Prepare Enquiry</button></p>
+    <p class="form-note">This starter form does not send your details yet. A form service or backend must be connected to receive enquiries.</p>
+    <div id="result" role="status"></div>
+  </form>
+</section>
+</main>
+<footer>
+  <div class="brand" style="color:white">TOBI ROYAL</div>
+  <p>Event Planner &amp; Hospitality · Beautiful moments, thoughtfully planned.</p>
+  <p>© <span id="year"></span> Tobi Royal Event Planner &amp; Hospitality</p>
+</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+function choose(value){document.getElementById('service').value=value}
+document.getElementById('enquiry').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('result').textContent='Thank you, '+document.getElementById('name').value+'! Your enquiry details are ready, but have not been sent. Please contact the business directly until online enquiries are connected.';
+  document.getElementById('result').style.cssText='margin-top:15px;padding:14px;background:#eee3d4;border-radius:4px';
+});
+</script>
+</body>
+</html>
